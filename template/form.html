@@ -1,0 +1,42 @@
+<html>
+   {% include 'header.html' %} 
+    <link rel="stylesheet" href="./static/css/style.css">
+
+<body id="top">
+    <main>
+    <br>  <br>  <br>  <br>
+    <h2  style='margin-left: 500px;''>Calculation</h2><br>
+    <form  style="width: 350;  margin-left: 500px;">
+        <div class="input-wrapper">
+        <label for="fname">First Value:</label><br>
+        <input type="text" name="n1" placeholder="Your name" required class="input-field" autocomplete="off" style=" border-radius: 2%; background-color: aqua">
+        </div>
+        <div class="input-wrapper">
+        <label for="lname">Second Value:</label><br>
+        <input type="text" name="n2" placeholder="Your name" required class="input-field" autocomplete="off" style=" border-radius: 2%; background-color: aqua">
+        </div>
+        <!-- <div class="input-wrapper">
+            <label for="lname">What you want to do </label><br>
+            <input type="text" name="symbol" placeholder="Symbol(-+*/)" required class="input-field" autocomplete="off" style=" border-radius: 2%; background-color: aqua">
+         </div> -->
+          
+        
+
+
+         <br>
+         <a href="#" class="btn btn-primary">
+            <button class="span" type="submit">Submit</button>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        
+        <div class="input-wrapper" >
+            <label for="lname">Result: </label><br>
+            <input type="text" name="op"   style=" border-radius: 2%; background-color: aqua" value='{{ op }}'/>
+         </div>
+          
+      </form>
+   </main>
+</body>  <br>  <br>  <br>  <br>  <br>
+    {% include 'footer.html' %} 
+</html>
