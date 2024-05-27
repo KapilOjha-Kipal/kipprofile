@@ -12,3 +12,15 @@ def home(request):
 
 def hello(request,hello):
     return HttpResponse(hello)
+
+def form(request):
+    op=0
+    try:
+        a=int(request.GET['n1'])
+        b= int(request.GET['n2'])
+       
+        op = a+b
+    except:
+        print('not calculate')
+    return render(request,'form.html', {'output' : op} )
+

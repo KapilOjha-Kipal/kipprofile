@@ -22,5 +22,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", view.home),
     path("Home/<str:hello>", view.hello),
+    path('form',view.form),
+    
    
 ]
