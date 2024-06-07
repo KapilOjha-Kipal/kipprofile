@@ -23,6 +23,6 @@ urlpatterns = [
     path("", view.home),
     path("Home/<str:hello>", view.hello),
     path('form',view.form),
-    
+    path('sumit',view.sumit)
    
 ]

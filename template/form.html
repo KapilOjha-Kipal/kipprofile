@@ -6,7 +6,8 @@
     <main>
     <br>  <br>  <br>  <br>
     <h2  style='margin-left: 500px;''>Calculation</h2><br>
-    <form  style="width: 350;  margin-left: 500px;">
+    <form  style="width: 350;  margin-left: 500px;" method="post" action="{%url 'submitform'%}">
+        {% csrf_token %}
         <div class="input-wrapper">
         <label for="fname">First Value:</label><br>
         <input type="text" name="n1" placeholder="Your name" required class="input-field" autocomplete="off" style=" border-radius: 2%; background-color: aqua">
@@ -32,7 +33,7 @@
         
         <div class="input-wrapper" >
             <label for="lname">Result: </label><br>
-            <input type="text" name="op"   style=" border-radius: 2%; background-color: aqua" value='{{ output }}'/>
+            <input type="text" name="op"   style=" border-radius: 2%; background-color: aqua" value="{{ output }}"/>
          </div>
           
       </form>

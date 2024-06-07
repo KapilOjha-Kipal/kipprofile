@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponse,HttpResponseRedirect
+from django.shortcuts import render,redirect
 
 def home(request):
     data = {
@@ -16,11 +16,17 @@ def hello(request,hello):
 def form(request):
     op=0
     try:
-        a=int(request.GET['n1'])
-        b= int(request.GET['n2'])
-       
-        op = a+b
+        if request.method == 'POST':
+        
+            a=int(request.POST['n1'])
+            b= int(request.POST['n2'])
+        
+            op = a+b
+            # return HttpResponseRedirect('/form') #this is used for redirect by using django.http
+            # return redirect('/') #this is used for redirect by using django.shortcut
     except:
         print('not calculate')
-    return render(request,'form.html', {'output' : op} )
+    return render(request,'form.html', {'output' : op } )
 
+def sumit(request):
+    return render(request,sumit.html) 
