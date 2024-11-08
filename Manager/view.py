@@ -28,5 +28,20 @@ def form(request):
         print('not calculate')
     return render(request,'form.html', {'output' : op } )
 
-def sumit(request):
-    return render(request,sumit.html) 
+def submit(request):
+    return HttpResponse(request)
+   
+def cal(request):
+    try:
+           if request.method == 'POST':
+        
+            a=int(request.POST['n1'])
+            b= int(request.POST['n2'])
+            c=request.POST["oper"]
+        
+            op = acb
+            # return HttpResponseRedirect('/form') #this is used for redirect by using django.http
+            # return redirect('/') #this is used for redirect by using django.shortcut
+    except:
+        print('not calculate')
+    return render(request,'form.html', {'output' : op } )

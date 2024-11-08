@@ -1,0 +1,42 @@
+<html>
+   {% include 'header.html' %} 
+
+<body>
+    <br><br><br>
+    <form action="calculator.html" style="margin: 150;" method="post">
+        {% csrf_token %}
+        <h1 style="align-content: center;">calculator</h1>
+        <label for="n1">Value 1</label>
+        <input type="text" name="n1" placeholder="Your number of choice" required class="input-field" autocomplete="off" style=" border-radius: 2%; background-color: aqua">
+        
+       <br> 
+        <label for="oper">Select operator</label>
+        <select name="oper" class="formcontrol">
+             <option value="+" >+</option>         
+             <option value="-" >-</option>      
+             <option value="/" >/</option>      
+             <option value="*" >*</option>         
+        </select>
+
+        <br>
+        <label for="n2">Value 2</label>
+        <input type="text" name="n2" placeholder="Your number of choice" required class="input-field" autocomplete="off" style=" border-radius: 2%; background-color: aqua">
+        
+        <br>
+        <a href="#" class="btn btn-primary">
+            <button class="span" type="submit">Submit</button>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        <br>
+        <div class="input-wrapper" >
+            <label for="lname">Result: </label><br>
+            <input type="text" name="op"   style=" border-radius: 2%; background-color: aqua" value="{{ output }}"/>
+         </div>
+    </div>
+    </div>
+    </form>
+</body>
+
+    {% include 'footer.html' %}
+</html>

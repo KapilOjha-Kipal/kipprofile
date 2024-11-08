@@ -6,7 +6,7 @@
     <main>
     <br>  <br>  <br>  <br>
     <h2  style='margin-left: 500px;''>Calculation</h2><br>
-    <form  style="width: 350;  margin-left: 500px;" method="post" action="{%url 'submitform'%}">
+    <form  style="width: 350;  margin-left: 500px;" action="{% url 'submit' %}" method="post" >
         {% csrf_token %}
         <div class="input-wrapper">
         <label for="fname">First Value:</label><br>
