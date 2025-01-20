@@ -1048,7 +1048,8 @@
   
     .hero { position: relative; }
   
-    .hero .input-wrapper { max-width: 390px; }
+    .hero .input-wrapper { max-width: 450px;
+                         text-align:center;}
   
     .hero-bg {
       display: block;
